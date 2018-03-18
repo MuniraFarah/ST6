@@ -1,0 +1,21 @@
+\chapter{Krav}
+\section{Systembeskrivelse}
+Formålet med dette projekt er at designe og udvikle en brugervenlig app til at detektere forværring af hjertefunktion hos patienter med kendt hjertesvigt. Denne app skal udvikles til hjemmemonitorering og skal kunne benyttes af patienter i eget hjem uden opsyn af sundhedsfagligt personale. App’en skal kunne måle patientens hjertefunktion ved brug af SCG og sende disse data til en database, der skal kunne tilgås af en læge. I det følgende vil de forskellige dele blive beskrevet mere detaljeret.\\
+\\
+Smartphones indeholder alt hvad der er nødvendigt for at måle SCG, og derfor udvikles app’en således, at den kan tilgå accelerometeret i en smartphone, og patienten kan dermed benytte egen smartphone til at foretage målingerne. Efter målingen er foretaget, skal app'en kunne filtrere data, for at eliminere støj, inden data sendes til databasen. For at få den største målgruppe udvikles app’en til androids der er det mest benyttede styresystem til smartphones. \\
+%Da målgruppen for app’en er ældre borgere, er det essentielt at udvikle en brugervenlig app. Et begrænset antal knapper og funktioner bliver derfor inkorporeret på patient-interfacet. Alle knapper og instruktioner skal benytte stor, letlæselig skrifttype og samtidig blive læst højt. Første tryk på en knap skal læse funktionen af knappen højt og anden tryk skal give adgang til funktionen.\\
+%visuelt tutorial, som viser trin for trin
+Hyppigheden af målinger skal bestemmes efter patientens NYHA klassificering. Når en måling skal tages skal app’en notificere patienten.\\
+\\
+Data der opsamles skal videresendes til en MySQL-database og skal gemmes under navn, CPR-nummer, diagnose (NYHA gruppe), måling nr. og dato. Databasen skal fungere som et redskab til en læge og gøre lægen i stand til at følge med i en evt. forværring af patientens hjertefunktion.\\
+Lægen skal kunne tilknytte patienter databasen, samtidig med at kunne oprette et login til app’en for den individuelle patient. Patienten skal selv logge ind med eget login før hver måling for at kunne foretage målingen. Ved inaktivitet skal denne logges ud igen. Dette gør det muligt at gemme flere patienters data individuelt.\\
+Læger skal have mulighed for at tilgå databasen, hvilket gøres ved at oprette disse som administrerende brugere.
+%Lægen skal have mulighed for at slette og oprette administrerende brugere med adgang til databasen. 
+Hver administrerende bruger skal have et brugernavn med tilhørende password der skal benyttes for at få adgang til data fra databasen. Ved inaktivitet skal den administrerende bruger automatisk logges af. For at undgå forveksling af patienter skal der kunne søges på CPR for at tilgå patienters data. \\
+%Under hver patient skal det være muligt for den praktiserende læge at kunne se alle målinger samt forværringer mellem valgte eller alle målinger. Forværringen skal vises grafisk samt i en tabel med alarm parametre. Databasen skal desuden automatisk analysere data hver gang en måling modtages og ved detektion af en signifikant forværring alarmere den praktiserende læge.\\
+ \\
+%Data fra målingerne skal ydermere overføres til en forskningsdatabase. Her skal data sendes anonymt, således målinger fra samme patient gemmes sammen dog uden at vise hvem patienten er. Data skal her sorteres efter køn, alder og NYHA gruppe.\\
+
+% Ved forglemmelse af måling (en dag for sent) skal en alarm fra databasen notificere den praktiserende læge. \\
+
+%App’en skal indeholde et filter.
