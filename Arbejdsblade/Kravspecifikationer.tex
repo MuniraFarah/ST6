@@ -1,33 +1,36 @@
-
 \section{Kravspecifikationer}
-På baggrund af systembeskrivelsen opstilles en række kravspecifikationer for en app der optager SCG til telemonitorering af hjertesvigtpatienter. Disse krav er inddelt i funktionnel og ikke-funktionelle. De funktionelle krav relaterer sig til selve app'ens funktionalitet, mens de non-funktionelle har betydning for brugervenligheden. For hvert krav er desuden specificeret, hvorfor kravet er medtaget.
+På baggrund af systembeskrivelsen opstilles en række kravspecifikationer for en app der optager SCG til telemonitorering af hjertesvigtpatienter. Disse krav er inddelt i funktionelle og non-funktionelle. De funktionelle krav relaterer sig til selve app'ens funktionalitet, mens de non-funktionelle har betydning for brugervenligheden. For hvert krav er desuden specificeret, hvorfor kravet er medtaget.
 
 %Der opstilles på baggrund af systembeskrivelsen kravspecifikationer for app’en. Disse krav opstilles i funktionelle og non-funktionelle, hvor de funktionelle krav er relevante for app’ens funktionalitet, og de non-funktionelle er relevante for brugervenligheden.
 
+
+
+
 \textbf{Funktionelle krav}
 \begin{itemize}
-    \item Brugeren skal kunne oprettes i databasen. \textit{Dette sikrer at brugernes data kan lagres, så de kan tilgås af en læge.}
-    \item Brugeren skal være tilknyttet personligt ID og password. \textit{Dette er nødvendigt for at sikre individuel lagring af brugerdata, så data for hver bruger kan monitoreres og analyseres individuelt.}
-    \item Systemet skal kunne tilgå smartphone'ens accelerometer. \textit{Det er nødvendigt for systemet at tilgå smartphone'ens accelerometer, således seismokardiografisk måling kan udføres og lagres.}
+    \item Administrator skal kunne oprette brugere i databasen. \textit{Dette sikrer at brugernes data kan lagres, så de kan tilgås af en administratoren.}
+    \item Brugeren skal logge ind med CPR og password. \textit{Dette er nødvendigt for at sikre individuel lagring af brugerdata, så data for hver bruger kan monitoreres og analyseres individuelt.}
+    \item Systemet skal kunne tilgå smartphonens accelerometer. \textit{Det er nødvendigt for systemet at tilgå smartphonens accelerometer, således seismokardiografisk måling kan udføres og lagres.}
     \item Systemet skal kunne optage ændringer i acceleration. \textit{Da seismokardiografi baserer sig på ændringer i acceleration, er dette nødvendigt for udførelse af måling.}
-    \item Systemet skal kunne måle tid i minutter og sekunder. \textit{Dette er nødvendigt for at angive en tidsakse for seismokardiografi-målingen.}
-    \item Brugeren skal kunne tilgå en brugsanvisning for udførsel af målinger. \textit{Dette er nødvendigt for at hjælpe brugeren med at udføre korrekt måling.}
-    \item Brugeren skal kunne indtaste relevante informationer i systemet
-Dette er nødvendigt for korrekt oprettelse af personen hos lægen. Oplysninger omfatter CPR, medicin, symptomer m.m.
+    \item Systemet skal kunne måle tid i sekunder. \textit{Dette er nødvendigt for at angive en tidsakse for seismokardiografi-målingen.}
+    \item Brugeren skal kunne tilgå en brugsvejledning for udførsel af målinger. \textit{Dette er nødvendigt for at hjælpe brugeren med at udføre korrekt måling.}
+    %\item Brugeren skal kunne indtaste relevante informationer i systemet
+%Dette er nødvendigt for korrekt oprettelse af personen hos lægen. Oplysninger omfatter CPR, medicin, symptomer m.m.
     \item Brugeren skal kunne starte målinger. \textit{Dette er nødvendigt for at få målinger.}
     \item Systemet skal kunne afslutte målinger efter specifik tidsperiode. \textit{Dette er nødvendigt for at få målinger af samme længde, uden at brugere selv skal stoppe målingen.}
-    \item Brugeren skal kunne indtaste oplysninger efter endt måling
-Dette er nødvendigt for at angive brugerens aktivitet forud for måling, såsom motion.
-    \item Systemet skal kunne starte ny måling over gamle uden at sende den gamle måling til databasen. \textit{Dette er nødvendigt hvis der opstår komplikationer undervejs. Dette kunne eksempelvis være større bevægelse af brystkassen, der ville give en dårlig måling.}
+  %  \item Brugeren skal kunne indtaste oplysninger efter endt måling
+%Dette er nødvendigt for at angive brugerens aktivitet forud for måling, såsom motion.
+    \item Brugeren skal kunne starte ny måling over gammel, uden at sende den gamle måling til databasen. \textit{Dette er nødvendigt hvis der opstår komplikationer undervejs, der ville give en dårlig måling.}
     \item Brugeren skal kunne stoppe målingen undervejs. \textit{Dette er nødvendigt for at brugeren kan stoppe målingen hvis komplikationer opstår undervejs.}
     \item Systemet skal kunne påminde brugeren om at foretage nye målinger. \textit{Dette er nødvendigt for at sikre, at brugeren foretager målinger ofte nok.}
     \item Brugeren skal kunne ændre password. \textit{Dette er nødvendigt for at give brugeren mulighed for at ændre password.}
-    \item Brugeren skal kunne logge ud af app’en. \textit{Dette beskytter mod uvedkommende tilgang til brugerens data.}
+    \item Brugeren skal kunne logge ud af systemet. \textit{Dette beskytter mod uvedkommende tilgang til brugerens data.}
 \end{itemize}
 
 \textbf{Non-funktionelle krav}:
 \begin{itemize}
-    \item Systemet skal være brugervenligt
-Dette er nødvendigt for at brugeren lettere kan tilgå og udføre målinger.
-    \item Systemet skal kunne visualiseres på en smartphone
+   % \item Systemet skal være brugervenligt
+%\textit{Dette er nødvendigt for at brugeren lettere kan tilgå og udføre målinger}.
+    \item Systemet skal virke på en smartphone.
+    \textit{Dette er nødvendigt for at brugeren kan udføre målinger som hjemmemonitorering.}
 \end{itemize}

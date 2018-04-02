@@ -1,4 +1,6 @@
 \input{preamble_ST4}											% Preamble indlaeses
+\acsetup{first-style=short}
+
 \raggedbottom													% Soerger for at LaTeX ikke "straekker" teksten
 
 %\includeonly{file1,file2}										% Inkluder kun specifikke filer (kommasepareret liste)
@@ -34,25 +36,28 @@
 %\include{Statusseminar/Statusseminar}
 
 %% Indledning %%
-
+\include{formalia/indledning}
 
 %% Problemanalyse %%
 \include{Problemanalyse/Hjertesvigt}
-%\include{Arbejdsblade/Ekstra}
 \include{Problemanalyse/Telemonitorering}
 \include{Problemanalyse/Modaliteter}
-\include{Problemanalyse/Problemafgransning}
+\include{Problemanalyse/SCGapp}
+%\include{Problemanalyse/Problemafgransning}
 %% Metode %%
 
 %% Krav %%
 
-\include{Krav/Systembeskrivelse}
-%\include{Krav/Usecase}
-%\include{Krav/Kravspecifikationer}
+\include{Problemlosning/Losningsstrategi/Losningsstrategi}
+\include{Problemlosning/Krav}
+\include{Problemlosning/Analyse}
+\include{Problemlosning/Design}
+\include{Problemlosning/Implementering}
+\include{Problemlosning/Test}
 
 % %% Arbejdsblade %%
-
-% \include{Arbejdsblade/Kravspecifikationer}
+%\include{Arbejdsblade/Usecase}
+%\include{Arbejdsblade/Kravspecifikationer}
 
 %\include{Arbejdsblade/Hjertesvigtsafsnit}
 % \include{Arbejdsblade/Sygdom}
@@ -63,6 +68,7 @@
 % \include{Arbejdsblade/OOP}
 % \include{Arbejdsblade/SCRUM}
 %\include{Arbejdsblade/Kravspecifikationer}
+
 
 
 %% Syntese %%
@@ -104,8 +110,6 @@
 %\addcontentsline{toc}{chapter}{Bilag A \ Navn} 				% Manuelle indgange i indholdsfortegnelsen (naar \includepdf bruges)
 
 %\includepdf[pages={x-y}]{filnavn}								% Inkluder eksterne bilag med \includepdf[pages={x-y}]{filnavn}
-
-
 \end{document}													% Slutter dokumentet - obligatorisk
 
 
